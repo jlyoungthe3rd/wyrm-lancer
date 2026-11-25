@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Wyrmspire Proving Grounds — Dragoon Mechanics Prototype</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%2338bdf8' d='M16 2 L24 18 L16 30 L8 18 Z'/></svg>"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="viewport-wrap">
+        <canvas id="game-canvas" width="1280" height="720" tabindex="0"></canvas>
+        <div id="hud-root"></div>
+        <div id="corner-flash-layer" aria-hidden="true">
+          <div class="corner-flash tl"></div>
+          <div class="corner-flash tr"></div>
+          <div class="corner-flash bl"></div>
+          <div class="corner-flash br"></div>
+        </div>
+        <div id="rotate-overlay" role="dialog" aria-label="Rotate device to landscape">
+          <div class="rotate-card">
+            <div class="rotate-icon">↻</div>
+            <h2>Rotate to Landscape</h2>
+            <p>Play with Left-Half Movement Swipes and Right-Half Combat in landscape mode.</p>
+            <button id="rotate-dismiss-btn" class="hud-pill-btn" type="button">Play Anyway</button>
+          </div>
+        </div>
+      </div>
+      <aside id="tuning-drawer" class="collapsed" aria-label="Live Mechanics Tuning Panel"></aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
